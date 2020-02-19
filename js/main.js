@@ -5,8 +5,8 @@
 // sconto 40% over 65
 // risultato quanto costa il biglietto?
 
-var chilometri = prompt("Quanti chilometri vuole percorrere?");
-var età = prompt("Quanti anni ha?");
+var chilometri = parseInt(prompt("Quanti chilometri vuole percorrere?"));
+var eta = parseInt(prompt("Quanti anni ha?"));
 var costoChilometro = 0.21;
 var prezzoStandard = chilometri * costoChilometro;
 // console.log(prezzoStandard);
@@ -15,9 +15,9 @@ var scontoMinorenne = prezzoStandard - ((prezzoStandard / 100) * 20);
 var scontoMaturo = prezzoStandard - ((prezzoStandard / 100) * 40);
 // console.log(scontoMaturo);
 
-if (età < 18) {
+if (eta < 18) {
     console.log("Ecco il prezzo del suo biglietto scontato del 20% " + scontoMinorenne);
-} else if (età >= 65) {
+} else if (eta >= 65) {
     console.log("Ecco il prezzo del suo biglietto scontato del 40% " + scontoMaturo);
 } else {
     console.log("Ecco il prezzo del suo biglietto " + prezzoStandard);
